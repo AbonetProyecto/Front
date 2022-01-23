@@ -7,15 +7,40 @@
 
 .home,
 .abogados,
-.reseña,
 .mapa
- {
+{
   display: flex;
   height: 90vh;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
 }
+
+.titulo{
+  font-weight: bolder;
+  color:red;
+}
+.denver{
+  background-image: url('./images/fondo4.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+.letra{
+  font-family: 'Oswald',sans-serif;
+  line-height: 2;
+  width: 100vw;
+  background-image: url('./images/fondo.jpg');
+  text-align: center;
+}
+.cuadro{
+  width: 50vw;
+}
+.bo{
+  width: 5vw;
+}
+
 
 .home {
   background-image: url('./images/fondo.jpg');
@@ -31,23 +56,17 @@
 .abogados {
   background-image: url('./images/fondo2.jpg');
   background-position: center;
-  background-size: fill;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
-}
-
-.reseña {
-  background-image: url('./images/fondo3.jpg');
-  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
   font-size: 100px;
 }
 
+
+
+
 .mapa {
-  background-image: url('./images/fondo4.jpg');
+  background-image: url('./images/fondo3.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

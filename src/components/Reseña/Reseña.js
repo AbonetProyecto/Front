@@ -32,7 +32,7 @@ useEffect(() => {
     <ul>
       {!users ? 'Cargando los comentarios ...' :
       users.map((user,index) => {
-      return<button className='btn2' key ={index}><span className='titulo'>Comentario:</span> {user.descripcion} ........  {user.email}</button>
+      return<button className='btn2' key ={index}><span className='titulo'>Comentario:</span> {user.descripcion} </button>
       })}
 
     </ul>

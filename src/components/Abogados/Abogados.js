@@ -19,8 +19,8 @@ const Abogados = () => {
         console.log(abogados)
     }, [abogados]);
 
-    const fetchAbogados = () => {
-        fetch(endpointAbogado)
+    async function  fetchAbogados(){
+         await fetch(endpointAbogado)
             .then(res => res.json())
             .then(data => {
                 let i = 0;
@@ -60,27 +60,28 @@ const Abogados = () => {
 
     return (
         <Container id="contenedor">
-            <Row className="fila">
-                <Card>
-                    <Card.Img variant="top" className="foto"
-                              src="https://cdn-icons-png.flaticon.com/512/1615/1615060.png"/>
-                    <Card.Body>
-                        <Card.Title>Card Title</Card.Title>
-                        <Card.Text>
-                            Some quick example text to build on the card title and make up the bulk of
-                            the card's content.
-                        </Card.Text>
-                    </Card.Body>
-                    <ListGroup className="list-group-flush">
-                        <ListGroupItem>Cras justo odio</ListGroupItem>
-                        <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-                    </ListGroup>
-                </Card>
+            {abogados.map((abog,i)=>(
+                <Row className="fila">
+                    <Card>
+                        <Card.Img variant="top" className="foto"
+                                  src="https://cdn-icons-png.flaticon.com/512/1615/1615060.png"/>
+                        <Card.Body>
+                            <Card.Title>{abog.nombre}</Card.Title>
+                            <Card.Text>
+                                {abog.descripcion}
+                            </Card.Text>
+                        </Card.Body>
+                        <ListGroup className="list-group-flush">
+                            <ListGroupItem>Numero: {abog.movil}</ListGroupItem>
+                            <ListGroupItem>Direccion: {abog.direccion}</ListGroupItem>
+                            <ListGroupItem>Casos: {abog.casos}</ListGroupItem>
+                        </ListGroup>
+                    </Card>
 
-            </Row>
-            {abogados.map((abog,i)=> (
-                <div>{abog.nombre}</div>
-            ))}
+                </Row>
+
+                )
+            )}
         </Container>
     );
 

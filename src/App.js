@@ -1,12 +1,14 @@
 import React from 'react';
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar/Navbar';
 import './App.css';
-import Home from './components/pages/Home';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Home from './components/Home/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Abogados from './components/pages/Abogados';
-import Reseña from './components/pages/Reseña';
-import Mapa from './components/pages/Mapa';
+
+import Abogados from './components/Abogados/Abogados';
+import Reseña from './components/Reseña/Reseña';
+import Mapa from './components/Mapa/Mapa';
 
 
 function App() {

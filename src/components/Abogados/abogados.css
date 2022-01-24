@@ -1,0 +1,8 @@
+.fila{
+    padding: 20px 5px;
+}
+.foto{
+    max-height: 300px;
+    max-width: 200px;
+    margin: auto;
+}

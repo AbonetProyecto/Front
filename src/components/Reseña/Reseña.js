@@ -5,10 +5,11 @@ import '../../App.css';
 const Reseña = () =>  {
   const [newUser,setNewUser] = useState({id: undefined, descripcion:'',username:'', email: ''})
   const [users,setUsers] = useState()
-  const endpoint = 'http://localhost:3000/api/v1/criticas|'
+  const endpoint = 'http://localhost:3001/api/v1/criticas'
   const fetchUsers= async () =>{
     const response =  await  fetch(endpoint)
     const responseJSON = await response.json()
+    console.log(responseJSON)
     setUsers(responseJSON)
   }
 

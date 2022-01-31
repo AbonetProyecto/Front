@@ -54,7 +54,7 @@ function Navbar() {
               className='nav-links-mobile'
               onClick={closeMobileMenu}
             >
-              MAPA
+              contactanos
             </Link>
           </li>
         </ul>

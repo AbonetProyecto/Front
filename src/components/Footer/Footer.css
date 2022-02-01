@@ -1,0 +1,22 @@
+.contenedorFooter{
+    background-color: #242741;
+    max-width: 100% !important;
+    padding: 30px 15px;
+}
+.links{
+    color : white !important;
+}
+.columnas{
+    display: flex;
+    flex-direction: column;
+}
+h5{
+    text-align: center;
+    text-decoration: underline;
+    color: #e7edef;
+}
+h6{
+    color: #e7edef;
+    margin-top: 10px !important;
+    text-align: center;
+}

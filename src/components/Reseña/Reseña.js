@@ -5,7 +5,7 @@ import '../../App.css';
 const Reseña = () =>  {
   const [newUser,setNewUser] = useState({id: undefined, descripcion:''})
   const [users,setUsers] = useState()
-  const endpoint = 'localhost:3001/api/v1/criticas'
+  const endpoint = 'http://localhost:3001/api/v1/criticas'
   const fetchUsers= async () =>{
     const response =  await  fetch(endpoint)
     const responseJSON = await response.json()
@@ -27,12 +27,15 @@ useEffect(() => {
   return (
     <div className='denver'>
     <h3 className='letra'>Puede comentar sobre el servicio recibido </h3>
+      <div className="contComment">
     <input className='cuadro'type='text' onChange={handleNameInput} value={newUser.descripcion} placeholder='Ingrese un comentario'/>
     <button className='bo' onClick={handleAddUser} > Agregar comentario </button>
-    <ul>
+      </div>
+    <ul className="lista">
       {!users ? 'Cargando los comentarios ...' :
       users.map((user,index) => {
-      return<button className='btn2' key ={index}><span className='titulo'>Comentario:</span> {user.descripcion}.  <span className='titulo'>Fecha:</span> 1/02/2022 </button>
+        let date = new Date(user.created_at)
+      return<button className='btn2' key ={index}><span className='titulo'>Comentario:</span> {user.descripcion}.  <span className='titulo'>Fecha:</span> {date.getFullYear()}-{date.getMonth()+1}-{date.getDate()} </button>
       })}
 
     </ul>
